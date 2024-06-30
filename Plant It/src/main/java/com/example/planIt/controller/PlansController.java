@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("plans")
+@CrossOrigin(value = {"http://localhost:3000"})
 public class PlansController {
     @Autowired
     PlansService plansService;

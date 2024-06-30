@@ -8,18 +8,16 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/places")
+@CrossOrigin(value = {"http://localhost:3000"})
 public class PlaceController {
 
     @Autowired
-   PlaceService placeService;
-
-
+    PlaceService placeService;
 
     @GetMapping
     public List<Place> getAllPlaces(){
         return placeService.getAllPlaces();
     }
-
 
     @GetMapping("/{townName}")
     public List<Place> getByTown(@PathVariable String townName){

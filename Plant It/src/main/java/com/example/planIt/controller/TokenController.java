@@ -1,5 +1,6 @@
 package com.example.planIt.controller;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,6 +10,7 @@ import java.util.Base64;
 import java.util.Map;
 
 @RestController
+@CrossOrigin(value = {"http://localhost:3000"})
 public class TokenController {
 
     private final ObjectMapper objectMapper = new ObjectMapper();
